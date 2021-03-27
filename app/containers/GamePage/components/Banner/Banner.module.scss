@@ -1,0 +1,157 @@
+@import "../../../../styles/variables";
+
+.wrapper {
+  width: 100%;
+  padding-top: 285px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+}
+
+.container {
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .banner {
+    height: 490px;
+
+    img {
+      height: 100%;
+      pointer-events: none;
+    }
+  }
+
+  .links {
+    padding: 60px 0 185px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+
+    .steam {
+      width: 336px;
+      margin-right: 55px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .social {
+      display: flex;
+
+      .socialItem {
+        margin-right: 30px;
+
+        svg {
+          width: 64px;
+
+          rect, path {
+            transition: .3s;
+          }
+
+          &:hover {
+            rect {
+              fill: #FFFFFF;
+              fill-opacity: 1;
+            }
+
+            path {
+              fill: #000000;
+            }
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.gradientBot {
+  width: 100%;
+  height: 260px;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.53) 100%);
+}
+
+@media screen and (max-width: $Laptop) {
+  .wrapper {
+    padding-top: (285px/$val);
+  }
+
+  .container {
+    width: (1280px/$val);
+
+    .banner {
+      height: (490px/$val);
+    }
+
+    .links {
+      padding: (60px/$val) 0 (185px/$val);
+
+      .steam {
+        width: (336px/$val);
+        margin-right: (55px/$val);
+      }
+
+      .social {
+
+        .socialItem {
+          margin-right: (30px/$val);
+
+          svg {
+            width: (64px/$val);
+          }
+        }
+      }
+    }
+  }
+
+  .gradientBot {
+    height: (260px/$val);
+  }
+}
+
+@media screen and (max-width: $Tablet) {
+  .wrapper {
+    padding-top: (285px/$val2);
+  }
+
+  .container {
+    width: (1280px/$val2);
+
+    .banner {
+      height: (490px/$val2);
+    }
+
+    .links {
+      padding: (60px/$val2) 0 (185px/$val2);
+
+      .steam {
+        width: (336px/$val2);
+        margin-right: (55px/$val2);
+      }
+
+      .social {
+
+        .socialItem {
+          margin-right: (30px/$val2);
+
+          svg {
+            width: (64px/$val2);
+          }
+        }
+      }
+    }
+  }
+
+  .gradientBot {
+    height: (260px/$val2);
+  }
+}

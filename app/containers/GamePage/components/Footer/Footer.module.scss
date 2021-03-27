@@ -1,0 +1,208 @@
+@import "../../../../styles/variables";
+
+.wrapper {
+  width: 100%;
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 1280px;
+  padding: 65px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .menu {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        width: 115px;
+        margin-right: 60px;
+
+        img {
+          width: 100%;
+          pointer-events: none;
+        }
+      }
+
+      .nav {
+        display: flex;
+
+        .navItem {
+          margin-right: 24px;
+          font-family: $fontNotoSans;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 22px;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: $primaryTextColor;
+          cursor: pointer;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .links {
+      padding: 25px 0;
+      display: flex;
+      align-items: center;
+
+      .steam {
+        width: 336px;
+        margin-right: 55px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .social {
+        display: flex;
+
+        .socialItem {
+          margin-right: 25px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .copyright {
+      font-family: $fontNotoSans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      text-transform: uppercase;
+      color: $primaryTextColor;
+    }
+  }
+
+  .awardsImage {
+    width: 500px;
+
+    img {
+      width: 100%;
+      pointer-events: none;
+    }
+  }
+}
+
+@media screen and (max-width: $Laptop) {
+  .wrapper {
+    padding-top: (150px/$val);
+  }
+
+  .container {
+    width: (1280px/$val);
+    padding: (65px/$val) 0;
+
+    .content {
+      .menu {
+        .logo {
+          width: (115px/$val);
+          margin-right: (60px/$val);
+        }
+
+        .nav {
+          .navItem {
+            margin-right: (24px/$val);
+            font-size: (16px/$val);
+            line-height: (22px/$val);
+          }
+        }
+      }
+
+      .links {
+        padding: (25px 0/$val);
+
+        .steam {
+          width: (336px/$val);
+          margin-right: (55px/$val);
+        }
+
+        .social {
+          .socialItem {
+            margin-right: (25px/$val);
+          }
+        }
+      }
+
+      .copyright {
+        font-size: (16px/$val);
+        line-height: (22px/$val);
+      }
+    }
+
+    .awardsImage {
+      width: (500px/$val);
+    }
+  }
+}
+
+@media screen and (max-width: $Tablet) {
+  .wrapper {
+    padding-top: (150px/$val2);
+  }
+
+  .container {
+    width: (1280px/$val2);
+    padding: (65px/$val2) 0;
+
+    .content {
+      .menu {
+        .logo {
+          width: (115px/$val2);
+          margin-right: (60px/$val2);
+        }
+
+        .nav {
+          .navItem {
+            margin-right: (24px/$val2);
+            font-size: (16px/$val2);
+            line-height: (22px/$val2);
+          }
+        }
+      }
+
+      .links {
+        padding: (25px 0/$val2);
+
+        .steam {
+          width: (336px/$val2);
+          margin-right: (55px/$val2);
+        }
+
+        .social {
+          .socialItem {
+            margin-right: (25px/$val2);
+          }
+        }
+      }
+
+      .copyright {
+        font-size: (16px/$val2);
+        line-height: (22px/$val2);
+      }
+    }
+
+    .awardsImage {
+      width: (500px/$val2);
+    }
+  }
+}

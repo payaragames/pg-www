@@ -1,0 +1,66 @@
+@import "../../../styles/variables";
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: #000000;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    width: 100%;
+    margin-bottom: 24px;
+
+    img {
+      width: 100%;
+      pointer-events: none;
+    }
+  }
+
+  .games {
+    display: flex;
+    flex-direction: column;
+
+    .game {
+      width: 100%;
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .social {
+    padding: 16px 0;
+    display: flex;
+
+    .socialItem {
+      margin-right: 16px;
+
+      svg {
+        width: 32px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}

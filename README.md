@@ -1,1 +1,1 @@
-# pg-www
+# Payara Games website

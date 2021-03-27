@@ -1,0 +1,97 @@
+@import "../../../../styles/variables";
+
+.wrapper {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.64) 100%);
+  z-index: 99;
+}
+
+.container {
+  width: 1280px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .logo {
+    padding: 40px 0;
+    width: 100px;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      pointer-events: none;
+    }
+  }
+
+  .nav {
+    padding-left: 200px;
+    display: flex;
+
+    .navItem {
+      margin-right: 100px;
+      font-family: $fontNotoSans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 33px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $primaryTextColor;
+      cursor: pointer;
+      transition: .3s;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        color: #FF8A00;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $Laptop) {
+  .container {
+    width: (1280px/$val);
+
+    .logo {
+      padding: (40px/$val) 0;
+      width: (100px/$val);
+    }
+
+    .nav {
+      padding-left: (150px/$val);
+
+      .navItem {
+        margin-right: (75px/$val);
+        font-size: (24px/$val);
+        line-height: (33px/$val);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $Tablet) {
+  .container {
+    width: (1280px/$val2);
+
+    .logo {
+      padding: (40px/$val2) 0;
+      width: (100px/$val2);
+    }
+
+    .nav {
+      padding-left: (150px/$val2);
+
+      .navItem {
+        margin-right: (75px/$val2);
+        font-size: (24px/$val2);
+        line-height: (33px/$val2);
+      }
+    }
+  }
+}

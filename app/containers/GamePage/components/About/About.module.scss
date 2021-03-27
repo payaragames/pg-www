@@ -1,0 +1,223 @@
+@import "../../../../styles/variables";
+
+.wrapper {
+  width: 100%;
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    align-self: flex-start;
+    font-family: $fontNotoSans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 54px;
+    text-transform: uppercase;
+    color: $primaryTextColor;
+    border-bottom: 1px solid #FF8A00;
+  }
+
+  .main {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .video {
+      width: 955px;
+
+      video {
+        width: 100%;
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+
+      .infoItem {
+        padding-top: 30px;
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.13);
+
+        &:first-child {
+          padding-top: 0;
+        }
+
+        .label {
+          font-family: $fontMontserrat;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 24px;
+          line-height: 29px;
+          letter-spacing: -0.025em;
+          color: #979797;
+        }
+
+        .text {
+          padding-top: 10px;
+          font-family: $fontNotoSans;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 33px;
+          text-transform: uppercase;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+
+  .feature {
+    width: 100%;
+    padding: 110px 350px 110px 24px;
+    position: relative;
+    border-radius: 2px;
+    background-size: cover;
+
+    .description {
+      position: relative;
+      font-family: $fontMontserrat;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 150%;
+      color: $primaryTextColor;
+      z-index: 1;
+    }
+
+    .gradient {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 2px;
+      background: linear-gradient(90deg, #000000 2.04%, rgba(0, 0, 0, 0) 103.34%);
+    }
+
+    &:nth-child(2n) {
+      padding: 110px 24px 110px 350px;
+
+      .gradient {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 2.04%, rgba(0, 0, 0, 0.88) 101.87%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $Laptop) {
+  .wrapper {
+    padding-top: (150px/$val);
+  }
+
+  .container {
+    width: (1280px/$val);
+
+    .title {
+      font-size: (40px/$val);
+      line-height: (54px/$val);
+    }
+
+    .main {
+      padding: (40px/$val) 0;
+
+      .video {
+        width: (955px/$val);
+      }
+
+      .info {
+        .infoItem {
+          padding-top: (30px/$val);
+
+          .label {
+            font-size: (24px/$val);
+            line-height: (29px/$val);
+            letter-spacing: (-0.025em/$val);
+          }
+
+          .text {
+            padding-top: (10px/$val);
+            font-size: (24px/$val);
+            line-height: (33px/$val);
+          }
+        }
+      }
+    }
+
+    .feature {
+      padding: (110px/$val) (350px/$val) (110px/$val) (24px/$val);
+
+      .description {
+        font-size: (24px/$val);
+        line-height: (150%/$val);
+      }
+
+      &:nth-child(2n) {
+        padding: (110px/$val) (24px/$val) (110px/$val) (350px/$val);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $Tablet) {
+  .wrapper {
+    padding-top: (150px/$val2);
+  }
+
+  .container {
+    width: (1280px/$val2);
+
+    .title {
+      font-size: (40px/$val2);
+      line-height: (54px/$val2);
+    }
+
+    .main {
+      padding: (40px/$val2) 0;
+
+      .video {
+        width: (955px/$val2);
+      }
+
+      .info {
+        .infoItem {
+          padding-top: (30px/$val2);
+
+          .label {
+            font-size: (24px/$val2);
+            line-height: (29px/$val2);
+            letter-spacing: (-0.025em/$val2);
+          }
+
+          .text {
+            padding-top: (10px/$val2);
+            font-size: (24px/$val2);
+            line-height: (33px/$val2);
+          }
+        }
+      }
+    }
+
+    .feature {
+      padding: (110px/$val2) (350px/$val2) (110px/$val2) (24px/$val2);
+
+      .description {
+        font-size: (24px/$val2);
+        line-height: (150%/$val2);
+      }
+
+      &:nth-child(2n) {
+        padding: (110px/$val2) (24px/$val2) (110px/$val2) (350px/$val2);
+      }
+    }
+  }
+}
